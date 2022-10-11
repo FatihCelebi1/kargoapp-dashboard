@@ -1,60 +1,98 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+  <v-app class="db-main">
+    <v-container class="mt-5">
+      <div class="d-flex justify-space-between">
+        <h5>Dasboard</h5>
+        <h4 class="caption">11 Ekim 2022</h4>
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+      <div>
+        <v-row class="mt-8 mb-6" no-gutters>
+          <v-col>
+            <v-card class="pa-2 rounded-l ma-2" elevation="0">
+              <v-btn color="#53abef" fab dark absolute top right>
+                <v-icon>mdi-format-list-checks</v-icon>
+              </v-btn>
+              <h5 class="grey--text font-weight-medium pt-5 pa-2">
+                Son Siparişler
+              </h5>
+              <h4 class="font-weight-medium pl-2 mb-4">
+                85 <span class="grey--text subtitle-2">/ Son 2 Gün</span>
+              </h4>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card class="pa-2 rounded-l ma-2" elevation="0">
+              <v-btn
+                color="#27b9c6"
+                fab
+                dark
+                absolute
+                top
+                right
+                width="60"
+                height="60"
+              >
+                <v-icon>mdi-package-variant</v-icon>
+              </v-btn>
+              <h5 class="grey--text font-weight-medium pt-5 pa-2">
+                Kargo Bekleyen
+              </h5>
+              <h4 class="font-weight-medium pl-2 mb-4">32</h4>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card class="pa-2 rounded-l ma-2" elevation="0">
+              <v-btn
+                color="#fe7782"
+                fab
+                dark
+                absolute
+                top
+                right
+                width="60"
+                height="60"
+              >
+                <v-icon>mdi-package-variant-closed</v-icon>
+              </v-btn>
+              <h5 class="grey--text font-weight-medium pt-5 pa-2">
+                Kargoya Verildi
+              </h5>
+              <h4 class="font-weight-medium pl-2 mb-4">25</h4>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card class="pa-2 rounded-l ma-2" elevation="0">
+              <v-btn
+                color="#a065f4"
+                fab
+                dark
+                absolute
+                top
+                right
+                width="60"
+                height="60"
+              >
+                <v-icon>mdi-truck</v-icon>
+              </v-btn>
+              <h5 class="grey--text font-weight-medium pt-5 pa-2">
+                Aktif Entegrasyonlar
+              </h5>
+              <h4 class="font-weight-medium pl-2 mb-4">1</h4>
+            </v-card>
+          </v-col>
+        </v-row>
+      </div>
+    </v-container>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+  name: "App",
 };
 </script>
+<style scoped>
+.db-main {
+  background-color: #ebf0f9;
+}
+</style>
