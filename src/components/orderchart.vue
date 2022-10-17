@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['Durum1', 'Durum2', 'Durum3'],
+        labels: ['İstanbul', 'Ankara', 'Bursa'],
         datasets: [
           {
             backgroundColor: ['#009cff', '#00c11b', '#fa487a'],
